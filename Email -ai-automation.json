@@ -1,0 +1,76 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b241ccc4-1189-4bb8-a2f7-2fe08a0be55a",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "fromEmail": "alinazubair353@gmail.com",
+        "toEmail": "aysh4503@gmail.com",
+        "subject": "learn skills",
+        "emailFormat": "text",
+        "text": "how r u? plz build ur skills for good future",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f8c02157-5cd0-4be6-ba50-3c8e74398d58",
+      "name": "Send an Email",
+      "webhookId": "d2e580d9-52ad-493d-af55-388799b50200",
+      "credentials": {
+        "smtp": {
+          "id": "LnzRm0fDXAwLZ4rb",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send an Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "449804a5-5faf-4f5b-83bc-464bdb0011de",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "43fe3b721e3b45c84a8a0ead5c0e0d1cd07509446e9cf0223381c800ab5075dd"
+  },
+  "nodeGroups": [],
+  "id": "EcSFXyvWh62A1byT",
+  "tags": []
+}
